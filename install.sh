@@ -97,7 +97,7 @@ sleep 40
     wget https://github.com/dinerocoin/dinero/releases/download/v1.0.1.0/dinerocore-1.0.1.0-linux64.tar.gz
     sudo tar -xzvf dinerocore-1.0.1.0-linux64.tar.gz
     sudo rm dinerocore-1.0.1.0-linux64.tar.gz
-    dinerocore-1.0.0/bin/dinerod -daemon
+    dinerocore-1.0.1/bin/dinerod -daemon
     clear
  
  sleep 10
@@ -123,10 +123,10 @@ venv/bin/pip install -r requirements.txt
 
 cd
 
-dinerocore-1.0.0/bin/dinerod -daemon
+dinerocore-1.0.1/bin/dinerod -daemon
 
 #Starting coin
-    (crontab -l 2>/dev/null; echo '@reboot sleep 30 && cd /root/dinerocore-1.0.0/bin/dinerod -daemon -shrinkdebugfile') | crontab
+    (crontab -l 2>/dev/null; echo '@reboot sleep 30 && cd /root/dinerocore-1.0.1/bin/dinerod -daemon -shrinkdebugfile') | crontab
     (crontab -l 2>/dev/null; echo '* * * * * cd /root/.dinerocore/sentinel && ./venv/bin/python bin/sentinel.py >/$') | crontab
 
 
@@ -159,4 +159,4 @@ cd
  echo $STRING4    
 
 read -p "(this message will remain for at least 120 seconds) Then press any key to continue... " -n1 -s
-dinerocore-1.0.0/bin/dinero-cli getinfo
+dinerocore-1.0.1/bin/dinero-cli getinfo
