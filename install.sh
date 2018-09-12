@@ -23,8 +23,8 @@ echo $STRING1
 
     read -e -p "Server IP Address : " ip
     read -e -p "Masternode Private Key (e.g. 7sQ27dGdwwEGrAPHmfghBBfWZnC6K1rDATNvm986dDfsaw3Wws4 # THE KEY YOU GENERATED EARLIER) : " key
-    read -e -p "Install Fail2ban? [Y/n] : " install_fail2ban
-    read -e -p "Install UFW and configure ports? [Y/n] : " UFW
+    read -e -p "Install Fail2ban? [Y/N] : " install_fail2ban
+    read -e -p "Install UFW and configure ports? [Y/N] : " UFW
 
     clear
  echo $STRING2
