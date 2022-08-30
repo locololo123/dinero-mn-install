@@ -55,10 +55,8 @@ echo $STRING6
     fi
     if [[ ("$UFW" == "y" || "$UFW" == "Y" || "$UFW" == "") ]]; then
     sudo apt-get install ufw
-    sudo ufw default deny incoming
     sudo ufw default allow outgoing
-    sudo ufw allow ssh
-    sudo ufw allow 26285/tcp
+    sudo ufw allow 26285/tcp comment DIN
     sudo ufw enable -y
     fi
 
@@ -72,6 +70,7 @@ rpcpassword='$password2'
 rpcallowip=127.0.0.1
 listen=1
 server=1
+disablewallet=1
 daemon=1
 maxconnections=256
 masternode=1
