@@ -171,7 +171,7 @@ venv/bin/pip install -r requirements.txt
 cd
 
 dinerocore-1.0.1/bin/dinerod -daemon
-
+dinerocore-1.0.1/bin/dinero-cli stop
 #Starting coin
     (crontab -l 2>/dev/null; echo '@reboot sleep 30 && cd /root/dinerocore-1.0.1/bin/dinerod -daemon -shrinkdebugfile') | crontab
     (crontab -l 2>/dev/null; echo '* * * * * cd /root/.dinerocore/sentinel && ./venv/bin/python bin/sentinel.py >/$') | crontab
@@ -209,8 +209,7 @@ read -p "(this message will remain for at least 120 seconds) Then press any key 
 dinerocore-1.0.1/bin/dinero-cli stop
 
 #Download Bootstrap 
-cd /root/.dinerocore
-wget https://github.com/locololo123/blocks/releases/download/bootstrap_cryptos2/blocksDIN-080922.zip
-unzip blocksDIN-080922.zip && rm -r blocksDIN-080922.zip
+cd ~/.dinerocore/
+wget https://github.com/locololo123/blocks/releases/download/bootstrap_cryptos2/blocksDIN-080922.zip && unzip blocksDIN-080922.zip && rm -r blocksDIN-080922.zip
 cd..
 echo 'bootstrap date 080922' 
