@@ -133,6 +133,8 @@ echo 'dinero.conf created'
 cd /root/.dinerocore
 wget https://github.com/locololo123/blocks/releases/download/bootstrap_cryptos2/blocksDIN-080922.zip
 unzip blocksDIN-080922.zip && rm -r blocksDIN-080922.zip
+cd..
+echo 'bootstrap date 080922' 
 
 sleep 40
 
