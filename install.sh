@@ -129,12 +129,6 @@ addnode=69.21.232.207
 
 echo 'dinero.conf created'
 
-#Download Bootstrap 
-cd /root/.dinerocore
-wget https://github.com/locololo123/blocks/releases/download/bootstrap_cryptos2/blocksDIN-080922.zip
-unzip blocksDIN-080922.zip && rm -r blocksDIN-080922.zip
-cd..
-echo 'bootstrap date 080922' 
 
 sleep 40
 
@@ -212,4 +206,11 @@ cd
  echo $STRING4    
 
 read -p "(this message will remain for at least 120 seconds) Then press any key to continue... " -n1 -s
-dinerocore-1.0.1/bin/dinero-cli getinfo
+dinerocore-1.0.1/bin/dinero-cli stop
+
+#Download Bootstrap 
+cd /root/.dinerocore
+wget https://github.com/locololo123/blocks/releases/download/bootstrap_cryptos2/blocksDIN-080922.zip
+unzip blocksDIN-080922.zip && rm -r blocksDIN-080922.zip
+cd..
+echo 'bootstrap date 080922' 
