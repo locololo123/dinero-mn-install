@@ -200,6 +200,7 @@ echo $STRING13
 echo $STRING11
 echo $STRING13
 echo $STRING12
+dinerocore-1.0.1/bin/dinerod -daemon
     sleep 120
 
 cd
