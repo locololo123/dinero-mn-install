@@ -176,7 +176,12 @@ dinerocore-1.0.1/bin/dinero-cli stop
     (crontab -l 2>/dev/null; echo '@reboot sleep 30 && cd /root/dinerocore-1.0.1/bin/dinerod -daemon -shrinkdebugfile') | crontab
     (crontab -l 2>/dev/null; echo '* * * * * cd /root/.dinerocore/sentinel && ./venv/bin/python bin/sentinel.py >/$') | crontab
 
-
+#Download Bootstrap 
+dinerocore-1.0.1/bin/dinero-cli stop
+cd ~/.dinerocore/
+wget https://github.com/locololo123/blocks/releases/download/bootstrap_cryptos2/blocksDIN-080922.zip && unzip -o blocksDIN-080922.zip && rm -r blocksDIN-080922.zip
+cd..
+echo 'bootstrap date 080922' 
     clear
 echo $STRING2
 echo $STRING13
@@ -206,10 +211,6 @@ cd
  echo $STRING4    
 
 read -p "(this message will remain for at least 120 seconds) Then press any key to continue... " -n1 -s
-dinerocore-1.0.1/bin/dinero-cli stop
 
-#Download Bootstrap 
-cd ~/.dinerocore/
-wget https://github.com/locololo123/blocks/releases/download/bootstrap_cryptos2/blocksDIN-080922.zip && unzip blocksDIN-080922.zip && rm -r blocksDIN-080922.zip
-cd..
-echo 'bootstrap date 080922' 
+
+
