@@ -169,15 +169,13 @@ virtualenv venv
 venv/bin/pip install -r requirements.txt
 
 cd
-
-dinerocore-1.0.1/bin/dinerod -daemon
-dinerocore-1.0.1/bin/dinero-cli stop
+cd dinerocore-1.0.1/bin/
+./dinero-cli stop
 #Starting coin
     (crontab -l 2>/dev/null; echo '@reboot sleep 30 && cd /root/dinerocore-1.0.1/bin/dinerod -daemon -shrinkdebugfile') | crontab
     (crontab -l 2>/dev/null; echo '* * * * * cd /root/.dinerocore/sentinel && ./venv/bin/python bin/sentinel.py >/$') | crontab
 
 #Download Bootstrap 
-dinerocore-1.0.1/bin/dinero-cli stop
 cd ~/.dinerocore/
 wget https://github.com/locololo123/blocks/releases/download/bootstrap_cryptos2/blocksDIN-080922.zip && unzip -o blocksDIN-080922.zip && rm -r blocksDIN-080922.zip
 cd..
@@ -189,29 +187,11 @@ echo $STRING3
 echo $STRING13
 echo $STRING4
     sleep 10
-echo $STRING7
-echo $STRING13
-echo $STRING8 
-echo $STRING13
-echo $STRING9 
-echo $STRING13
-echo $STRING10
-echo $STRING13
-echo $STRING11
-echo $STRING13
-echo $STRING12
-dinerocore-1.0.1/bin/dinerod -daemon
-    sleep 120
+    cd
+    cd dinerocore-1.0.1/bin/
+    ./dinerod -daemon
 
-cd
-    clear
- echo $STRING2
- echo $STRING13
- echo $STRING3 
- echo $STRING13
- echo $STRING4    
-
-read -p "(this message will remain for at least 120 seconds) Then press any key to continue... " -n1 -s
+watch ./dinero-cli getinfo
 
 
 
