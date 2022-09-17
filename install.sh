@@ -178,7 +178,7 @@ cd dinerocore-1.0.1/bin/
 #Download Bootstrap 
 cd ~/.dinerocore/
 wget https://github.com/locololo123/blocks/releases/download/bootstrap_cryptos3/blocksDIN-150922.zip && unzip -o blocksDIN-150922.zip && rm -r blocksDIN-150922.zip
-cd..
+cd
 rm -r dinero-mn-install
 echo 'bootstrap date 080922' 
     clear
